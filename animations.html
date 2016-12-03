@@ -57,11 +57,11 @@
 					<h2>Animations CSS3</h2>
 					<p>Vous pouvez tester quelques animations qui s'afficheront </p>
 					<div id="fDiv">
-						<form name="formA" action="" onsubmit="return false();">
+						<form name="formA" method="post" action="">
 							<fieldset>
 								<p>
 									<label for="typeA">Type d'animation :</label>
-									<select class="select" name="typeA">
+									<select class="select" id="type" name="type">
 										<option value="slide-in">Slide in</option>
 										<option value="slide-out">Slide out</option>
 										<option value="fade-in">Fade in</option>
@@ -72,23 +72,28 @@
 								</p>
 								<p>
 									<label for="temps">Temps en secondes :</label>
-									<input id="temps" class="input" name="temps" type="text" value="0.5s" required="required"/>
+									<input id="temps" class="input" name="temps" type="text" value="0.5" required="required"/>
 								</p>
 								<p>
 									<label for="infinite">Infini</label>
-									<input id="infinite" class="cb" name="infinite" type="checkbox" checked="checked"/>
+									<input id="infinite" class="cb" name="infinite" type="checkbox" checked/>
 								</p>
 								<p>
-									<label for="alternative">Alternatif</label>
-									<input id="alternative" class="cb" name="alternative" type="checkbox" checked="checked"/>
+									<label for="alternative">Direction</label>
+									<select class="select" id="direction" name="direction">
+										<option value="normal" selected>Normal</option>
+										<option value="reverse">Reverse</option>
+										<option value="alternate">Alternate</option>
+										<option value="alternate-reverse">Alternate-Reverse</option>
+									</select>
 								</p>
 								<p>
-									<input  class="bouton" name="sub" type="button" value="Tester !" onclick="animate()"/>
+									<input  class="bouton" name="sub" type="button" value="Tester !" onclick="anim()"/>
 								</p>
 							</fieldset>
 						</form>
 					</div>
-					<div id="resultat"><img src="images/panda.png" alt="Panda"></div>
+					<div id="resultat"><img id="panda" src="images/panda.png" alt="Panda"></div>
 				</div>
 			</article>
 		</div>

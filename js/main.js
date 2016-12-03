@@ -38,9 +38,20 @@ function drop(target, evt){
 /* Page animations css */
 
 
-function animate(){
-
-	alert("hihi");
+function anim(){
+	var type = document.getElementById("type").value;
+	var temps = document.getElementById("temps").value;
+	var infini = document.getElementById("infinite").checked;
+	var direction = document.getElementById("direction").value;
+	var panda = document.getElementById("panda");
+	var i;
+	if (infini == true) {
+		i = " infinite";
+	}else{
+		i = "";
+	}
+	panda.style.WebkitAnimation = type+" "+temps+"s"+i+" "+direction;
+	panda.style.animation = type+" "+temps+"s"+i+" "+direction;
 }
 
 /*
