@@ -1,0 +1,235 @@
+/*
+COULEURS :
+	- couleur texte : #002D40;
+	- couleur bordures : #5F8287;
+
+*/
+/* ----------------------------- 
+    = Structure Générale 	
+   ----------------------------- */	
+#contener {
+	width				:95%;
+	margin				:auto;
+	background-image	:url(../images/background.png);
+	font-family			:'Roboto';
+	color				:#002D40;
+}
+
+#colonneDroite { /* Pour le menu latéral */
+	display: inline-block;
+	position : relative;
+	left: 11%;
+	width: 89%;
+}
+a{  
+	cursor				:pointer;
+    text-decoration		:none;
+}   
+article {
+	padding : 13px;
+}
+footer{
+	text-align			:center;
+	font-size			:0.8em;
+}
+
+/* Tableaux */
+table {
+	border-collapse : collapse;
+}
+th{
+	font-size : 1.5em;
+	font-family: 'Pacifico';
+}
+td {
+	text-align: center;
+}
+tr, td, th {
+	border : 3px solid #5F8287;
+}
+
+/* Style des zones de texte */
+.input
+{
+	width: 331px;
+	float: right;
+	color: #002D40;
+	font-family:'Roboto';
+	border:1px solid #5F8287;
+	border-radius:4px;
+	background-image: url(../images/papier.jpg);
+	padding-left:8px;
+}
+
+.select{
+	width: 341px;
+	float: right;
+	color: #002D40;
+	font-family:'Roboto';
+	border:1px solid #5F8287;
+	border-radius:4px;
+	background-image: url(../images/papier.jpg);
+	padding-left:8px;
+}
+
+/*style des boutons*/
+
+.bouton{
+	display: block;
+	border: none;
+	font-family: 'Pacifico';
+	font-size: 1em;
+	color: #002D40;
+	background-color: transparent;
+	box-shadow: 3px 6px 20px #002D40;
+	border-radius : 10px;
+	margin: 0 auto;
+	cursor: pointer;
+	padding: 16px;
+}
+
+/* ----------------------------- 
+    = Polices de caractère         
+   ----------------------------- */
+
+/* Corps de text */
+@font-face {
+	font-family : 'Roboto';
+	src : url('../fonts/roboto/Roboto-Medium.ttf') format('truetype'),
+ 	url('../fonts/roboto/Roboto-Medium.woff') format('woff');
+}
+/* Titre principal et autres titres important*/
+@font-face {
+	font-family : 'BackToBlack';
+	src : url('../fonts/btob/btob.ttf') format('truetype'),
+	url('../fonts/btob/btob.woff') format('woff');
+}
+/*Autres titres, titre métier, en-tête de tableau etc...*/
+@font-face {
+ 	font-family : 'Pacifico';
+ 	src : url('../fonts/pacifico/Pacifico.ttf') format('truetype'),
+ 	url('../fonts/pacifico/Pacifico.woff') format('woff');
+}
+
+/*----------------------------- 
+    = En-tête principale 	
+   ----------------------------- */	
+#mainHeader {
+	text-align: center;
+	border: 4px solid #5F8287 ;
+	border-radius: 50px 0px 50px 0px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	max-height: 200px;
+	box-shadow: 5px 5px 5px #000;
+}
+#mainHeader h1 {
+	font-family: 'BackToBlack';
+	font-size: 3em;
+}
+
+/* ----------------------------- 
+    = Navigateur principal	
+   ----------------------------- */		
+#menuPrincipal {
+	text-align			:center;
+	border-bottom		:1px solid #5F8287;
+	padding				:1%;
+	font-weight			:bold;
+	margin-top			:15px;
+}
+#menuPrincipal div{
+	border: 2px solid #5F8287;
+	display: inline-block;
+	width:15%;
+	padding:10px;
+	border-radius: 7px;
+}
+#menuPrincipal div:hover{
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	color: #FFFFFF;
+	background-color: #5F8287;
+}
+#menuPrincipal div:hover .b{
+	display: none;
+}
+#menuPrincipal div .w{
+	display: none;
+}
+#menuPrincipal div:hover .w{
+	display: block;
+}
+#menuPrincipal div img {
+	width:32px;
+	margin: 0 auto;
+}
+#menuPrincipal a{  
+    color: #002D40;
+}
+
+/* ----------------------------- 
+    = Navigateur latéral
+   ----------------------------- */
+#menuFix {
+	position: fixed;
+	top: 50%;
+	bottom: 50%;
+	width: 10%;
+}
+#menuFix nav {
+	border: 2px solid #5F8287;
+	border-radius: 10px;
+	text-align: center;
+}
+#menuFix p {
+	background-color: #5F8287;
+	margin-left: 8px;
+	margin-right: 8px;
+	border: 1px solid black;
+	border-radius: 10px 0px 10px 0px;
+	box-shadow: 5px 5px 5px #5F8287;
+}
+#menuFix a {
+	color: #fff;
+}
+#menuFix p:hover{
+	color: #002D40;
+	background-color: #FFFFFF;
+}
+
+
+/* ----------------------------- 
+    = Responsive Web Design	
+   ----------------------------- */	
+   /*	Tablettes :*/
+/*@media screen and (max-width: 720px) {
+@media screen and (max-width: 720px) {*/
+
+	/* ----------------------------------- 
+	    = Structure pour écran plus petit
+	   ----------------------------------- */	
+	/*#contener {
+		width				:100%;
+		margin				:auto;
+		background-image	:url(../images/background.png);
+		font-family			:'Source Sans Pro';
+		color				:#002D40;
+		padding				:5px;
+		}*/
+	/* ----------------------------------- 
+	    = Titre h2 en plus petite taille
+	   ----------------------------------- */
+	/*h2 {	
+		display				:inline-block;
+		font-family			:'Pacifico';
+		font-size			:x-large;
+	}*/
+	/* ----------------------------------- 
+	    = Footer devient invisible
+	   ----------------------------------- */
+	/*.invisible {
+		display: none;
+	}
+}*/

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<title>CV Adrien Pleux</title>
+		<link href="css/main.css" rel="stylesheet" />
+		<link href="css/contact.css" rel="stylesheet" />
+		<script type="text/javascript" src="./js/main.js"></script>
+	</head>
+	<body>
+		<div id="contener">
+			<header>	
+				<div id="mainHeader">
+					<h1>Adrien Pleux</h1>
+					<h3>Etudiant en Licence Professionnelle SIL</h3>
+				</div>	
+			</header>
+			<nav id="menuPrincipal">
+				<a href="./index.html">
+					<div>
+						<img class="b" src="images/menu/home.png" alt="Logo Accueil"/>
+						<img class="w" src="images/menu/homeW.png" alt="Logo Accueil"/>
+						<p>Accueil</p>
+					</div>
+				</a>
+				<a href="./cv.html">
+					<div>
+						<img class="b" src="images/menu/cv.png" alt="Logo CV"/>
+						<img class="w" src="images/menu/cvW.png" alt="Logo CV"/>
+						<p>Mon CV</p>
+					</div>
+				</a>
+				<a href="./travaux.html">
+					<div>
+						<img class="b" src="images/menu/travaux.png" alt="Logo Travaux"/>
+						<img class="w" src="images/menu/travauxW.png" alt="Logo Travaux"/>
+						<p>Travaux</p>
+					</div>
+				</a>
+				<a href="./animations.html">
+					<div>
+						<img class="b" src="images/menu/panda.png" alt="Logo Animations"/>
+						<img class="w" src="images/menu/pandaW.png" alt="Logo Animations"/>
+						<p>Animations CSS3</p>
+					</div>
+				</a>
+				<a href="./contact.html">
+					<div>
+						<img class="b" src="images/menu/contact.png" alt="Logo Contact"/>
+						<img class="w" src="images/menu/contactW.png" alt="Logo Contact"/>
+						<p>Contact</p>
+					</div>
+				</a>
+			</nav>	
+			<article>
+				<div id="fContact">
+					<h2>Contact</h2>
+					<form name="formC" method="post" onsubmit="JS_submit(this);">
+						<fieldset>
+							<p>
+								<label for="mail">Votre adresse mail :</label>
+								<input id="mail" class="input" name="mail" type="email" placeholder="exemple@mail.com..." required="required"/>
+							</p>
+							<p>
+								<label for="sujet">Objet :</label>
+								<input id="sujet" class="input" name="sujet" type="text" placeholder="Sujet du message..." required="required"/>
+							</p>
+							<p>
+								<label for="msg">Message :</label>
+								<textarea id="msg" class="input" name="msg" placeholder="Votre message..." required="required"></textarea>
+							</p>
+						</fieldset>
+						<p><input class="bouton" type="submit" value="Envoyer"/></p>
+					</form>
+				</div>
+			</article>			
+			<footer  class="invisible">
+				<p class="smaller">Site développé en <img src="images/HTML5_Logo_32.png" alt="logo html5"/><br />
+				Dernière mise à jour le <time datetime="2016-10-24">24 Octobre 2016</time>.</p>
+				<p class="smaller">
+					<a href="http://jigsaw.w3.org/css-validator/">
+						<img 	style="border:0;width:88px;height:31px"
+								src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+								alt="CSS Valide !" />
+					</a>
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>

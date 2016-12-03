@@ -1,0 +1,76 @@
+/* PAGE D ACCUEIL */ 
+article{
+	padding: 20px 20px 0px 20px;
+}
+#bienvenue{
+	padding: 16px;
+	width:50%;
+	margin: 0 auto;
+	text-align: justify;
+	box-shadow:  0px 0px 50px grey;
+	margin-bottom: 50px;
+}
+#dragdrop{
+	width:95%;
+	height: auto;
+	margin: 0 auto;
+	text-align: justify;
+	box-shadow:  0px 0px 50px grey;
+	padding: 16px;
+}
+#bienvenue h2, #dragdrop h2 {
+	font-family : 'Pacifico';
+	text-align: center;
+	font-size : 2em;
+}
+
+/* ----------------------------- 
+    = Drag & Drop page d'accueil
+   ----------------------------- */
+#envoi{
+	border : 5px solid #5F8287;
+	text-align : center;
+	width : auto;
+	height : auto;
+	display : inline-block;
+	padding: 6px;
+}
+
+#recept{
+	position: relative;
+	left:2%;
+	text-align : center;
+	border : 5px dashed #5F8287;
+	width : auto;
+	height: inherit;
+	display: inline-block;
+	padding: 166px;
+}
+
+#envoi .drag{
+	cursor: move;
+}
+#pearltrees, #linkedin, #gplus, #soundcloud, #facebook {
+	display : inline-block;
+}
+
+/* Effet de rebond sur les images */
+#envoi .drag:hover{
+    -webkit-animation: bounce 0.3s ease infinite alternate; /* Safari, Chrome */
+    animation: bounce 0.3s ease infinite alternate; /* Syntaxe IE (normale) */
+}
+
+@keyframes bounce{ /* Syntaxe IE (normale) */
+     from {transform: translateY(0);}
+     to   {transform: translateY(-20px);}
+}
+
+@-webkit-keyframes bounce{ /* Safari, Chrome*/
+     from {-webkit-transform: translateY(0);}
+     to   {-webkit-transform: translateY(-20px);}
+}
+
+@-moz-keyframes bounce{ /* Mozillas*/
+     from {-moz-transform: translateY(0);}
+     to   {-moz-transform: translateY(-20px);}
+}

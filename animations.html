@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<title>CV Adrien Pleux</title>
+		<link href="css/main.css" rel="stylesheet" />
+		<link href="css/animations.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/main.js"></script>
+	</head>
+	<body>
+		<div id="contener">
+			<header>	
+				<div id="mainHeader">
+					<h1>Adrien Pleux</h1>
+					<h3>Etudiant en Licence Professionnelle SIL</h3>
+				</div>	
+			</header>
+			<nav id="menuPrincipal">
+				<a href="./index.html">
+					<div>
+						<img class="b" src="images/menu/home.png" alt="Logo Accueil"/>
+						<img class="w" src="images/menu/homeW.png" alt="Logo Accueil"/>
+						<p>Accueil</p>
+					</div>
+				</a>
+				<a href="./cv.html">
+					<div>
+						<img class="b" src="images/menu/cv.png" alt="Logo CV"/>
+						<img class="w" src="images/menu/cvW.png" alt="Logo CV"/>
+						<p>Mon CV</p>
+					</div>
+				</a>
+				<a href="./travaux.html">
+					<div>
+						<img class="b" src="images/menu/travaux.png" alt="Logo Travaux"/>
+						<img class="w" src="images/menu/travauxW.png" alt="Logo Travaux"/>
+						<p>Travaux</p>
+					</div>
+				</a>
+				<a href="./animations.html">
+					<div>
+						<img class="b" src="images/menu/panda.png" alt="Logo Animations"/>
+						<img class="w" src="images/menu/pandaW.png" alt="Logo Animations"/>
+						<p>Animations CSS3</p>
+					</div>
+				</a>
+				<a href="./contact.html">
+					<div>
+						<img class="b" src="images/menu/contact.png" alt="Logo Contact"/>
+						<img class="w" src="images/menu/contactW.png" alt="Logo Contact"/>
+						<p>Contact</p>
+					</div>
+				</a>
+			</nav>
+			<article>
+				<div id="boiteAnimations">
+					<h2>Animations CSS3</h2>
+					<p>Vous pouvez tester quelques animations qui s'afficheront </p>
+					<div id="fDiv">
+						<form name="formA" >
+							<fieldset>
+								<p>
+									<label for="typeA">Type d'animation :</label>
+									<select class="select" name="typeA">
+										<option value="slide-in">Slide in</option>
+										<option value="slide-out">Slide out</option>
+										<option value="fade-in">Fade in</option>
+										<option value="fade-out">Fade out</option>
+										<option value="cover-in">Cover in</option>
+										<option value="cover-out">Cover out</option>
+									</select>
+								</p>
+								<p>
+									<label for="temps">Temps en secondes :</label>
+									<input id="temps" class="input" name="temps" type="text" value="0.5s" required="required"/>
+								</p>
+								<p>
+									<label for="infinite">Infini</label>
+									<input id="infinite" class="cb" name="infinite" type="checkbox" checked="checked"/>
+								</p>
+								<p>
+									<label for="alternative">Alternatif</label>
+									<input id="alternative" class="cb" name="alternative" type="checkbox" checked="checked"/>
+								</p>
+								<p>
+									<input  class="bouton" name="sub" type="button" value="Tester !" onclick="animate()"/>
+								</p>
+							</fieldset>
+						</form>
+					</div>
+					<div id="resultat"><img src="images/panda.png" alt="Panda"></div>
+				</div>
+			</article>
+		</div>
+	</body>
+</html>

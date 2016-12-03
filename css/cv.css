@@ -1,0 +1,104 @@
+/* @author 	: Adrien PLEUX		*/
+/* @date 	: Oct 2016 		*/
+
+/* ----------------------------- 
+		= Structure	
+   ----------------------------- */
+
+.bordure {
+	border-bottom		:1px solid #5F8287;
+	padding-bottom: 50px;
+}
+.bordure h2, #contact h2 {
+	font-family : 'BackToBlack';
+	font-size : 2.2em;
+}
+
+h2 > img {
+	padding-right: 10px;
+}
+
+	
+/* ----------------------------- 
+    = En-tête CV            
+   ----------------------------- */
+#en-tete{
+	position: relative;
+    right: 15%;
+    display: inline-block;
+}
+#en-tete h2{
+	font-family: 'Pacifico';
+	font-size : 3em;
+}
+#photo {
+	width: auto;
+	height: auto;
+	min-width			:100px;
+	min-height			:100px;
+	border				:4px solid #FFFFFF;
+	border-radius		:5px;
+	box-shadow			:2px 2px 2px #AAA;
+	display				:inline-block;
+	}
+
+#contact {
+	position : relative;
+	left : 60%;
+	width: 20%;
+	font-size : small;
+	display : inline-block;
+	border-left : 1px solid grey;
+	border-bottom : 1px solid grey;
+	border-radius: 20px;
+    box-shadow: -3px 4px 3px #AAA;
+	}
+
+#contact img {
+	float : left;
+	margin: 3px 10px 0px 10px;
+}
+/* ----------------------------- 
+    = Formations        
+   ----------------------------- */
+#pForm, #pExp, #pInt{
+	width : 70%;
+	margin: 0 auto;
+	text-align: justify;
+	box-shadow:  0px 0px 50px grey;
+	padding : 16px;
+}
+
+
+/* ----------------------------- 
+    = Compétences          
+   ----------------------------- */
+#tabComp{
+	width: 80%;
+	margin: 0 auto;
+}
+#tabComp img{
+	margin:5px;
+}
+
+.niveau {
+	width				:83px; 
+	height				:14px;
+	display 			:inline-block;
+}
+.niveau1{
+	background			:url('../images/competences/niveau.png') no-repeat 0-64px;
+	}
+.niveau2{
+	background: url('../images/competences/niveau.png') no-repeat 0-48px;
+}
+.niveau3{
+	background			:url('../images/competences/niveau.png') no-repeat 0-32px;
+	}
+.niveau4{
+	background			:url('../images/competences/niveau.png') no-repeat 0-16px;
+	}
+.niveau5{
+	background			:url('../images/competences/niveau.png') no-repeat;
+	}
+	

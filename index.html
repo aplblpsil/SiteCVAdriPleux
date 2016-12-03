@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<title>CV Adrien Pleux</title>
+		<link href="css/main.css" rel="stylesheet" />
+		<link href="css/accueil.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/main.js"></script>
+	</head>
+	<body>
+		<div id="contener">
+			<header>	
+				<div id="mainHeader">
+					<h1>Adrien Pleux</h1>
+					<h3>Etudiant en Licence Professionnelle SIL</h3>
+				</div>	
+			</header>
+			<nav id="menuPrincipal">
+				<a href="./index.html">
+					<div>
+						<img class="b" src="images/menu/home.png" alt="Logo Accueil"/>
+						<img class="w" src="images/menu/homeW.png" alt="Logo Accueil"/>
+						<p>Accueil</p>
+					</div>
+				</a>
+				<a href="./cv.html">
+					<div>
+						<img class="b" src="images/menu/cv.png" alt="Logo CV"/>
+						<img class="w" src="images/menu/cvW.png" alt="Logo CV"/>
+						<p>Mon CV</p>
+					</div>
+				</a>
+				<a href="./travaux.html">
+					<div>
+						<img class="b" src="images/menu/travaux.png" alt="Logo Travaux"/>
+						<img class="w" src="images/menu/travauxW.png" alt="Logo Travaux"/>
+						<p>Travaux</p>
+					</div>
+				</a>
+				<a href="./animations.html">
+					<div>
+						<img class="b" src="images/menu/panda.png" alt="Logo Animations"/>
+						<img class="w" src="images/menu/pandaW.png" alt="Logo Animations"/>
+						<p>Animations CSS3</p>
+					</div>
+				</a>
+				<a href="./contact.html">
+					<div>
+						<img class="b" src="images/menu/contact.png" alt="Logo Contact"/>
+						<img class="w" src="images/menu/contactW.png" alt="Logo Contact"/>
+						<p>Contact</p>
+					</div>
+				</a>
+			</nav>	
+			<article>
+				<div id="bienvenue">
+					<h2>Bonjour et bienvenue !</h2>
+					<p>Je m'appelle Adrien Pleux, j'ai 20 ans et je suis actuellement étudiant à l'Université de Bourgogne en Licence Professionnelle Systèmes Informatiques et Logiciels (LPSIL). Je suis un passionné d'Internet, de l'informatique et des nouvelles technologies et c'est pourquoi je tiens à devenir un bon développeur informatique.<br /><br/>Ce site a pour but de valoriser mes compétences de programmation d'applications web ou mobiles et d'en savoir plus sur mon parcours scolaire et professionnel.</p>
+				</div>
+			</article>
+			<article>
+				<div id="dragdrop">
+					<h2>Me retrouver sur le web</h2>
+					<p>Pour être redirigé vers mes pages Facebook, Linkedin, Google +, ainsi que pour consulter mon outil de veille technologique Pearltrees, veuillez cliquer-glisser les éléments correspondants dans la zone de réception :</p>
+					<div id="envoi">
+						<p>Éléments mobiles</p>
+						<div id="pearltrees" draggable="true" ondragstart="drag(this,event);" >
+							<img src="images/social/pearltrees.png" alt="Logo Linkedin" class="drag"/>
+						</div>
+						<div id="linkedin" draggable="true" ondragstart="drag(this,event);" >
+							<img src="images/social/linkedin.png" alt="Logo Linkedin" class="drag"/>
+						</div>
+						<div id="gplus" draggable="true" ondragstart="drag(this,event);" >
+							<img src="images/social/gplus.png" alt="Logo Google +" class="drag"/>
+						</div>
+						<div id="facebook" draggable="true" ondragstart="drag(this,event);" >
+							<img src="images/social/facebook.png" alt="Logo Facebook" class="drag"/>
+						</div>
+						<div id="soundcloud" draggable="true" ondragstart="drag(this,event);" >
+							<img src="images/social/soundcloud.png" alt="Logo Soundcloud" class="drag"/>
+						</div>
+					</div>
+					<div id="recept" ondragover="return false" ondrop="drop(this,event);">
+						<p>Zone de réception</p>
+					</div>
+				</div>
+				
+			</article>
+			<footer>
+				<p>Site développé en <img src="images/HTML5_Logo_32.png" alt="logo html5"/><br />
+				Dernière mise à jour le <time datetime="2016-11-18">28 Novembre 2016</time>.</p>
+				<p>
+					<a href="http://jigsaw.w3.org/css-validator/">
+						<img 	style="border:0;width:88px;height:31px"
+								src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+								alt="CSS Valide !" />
+					</a>
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>
