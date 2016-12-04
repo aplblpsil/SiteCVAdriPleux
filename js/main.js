@@ -1,19 +1,28 @@
-/* Envoi du mailto */
+/* --------------------------------
+    = Envoi du mailto page contact
+   -------------------------------- */
+/* S'active une fois que l'utilisateur clique sur le bouton "Envoyer" */
 function JS_submit(frm) {
 		var msg = document.getElementById("msg").value;
-		var subject = document.getElementById("sujet").value;	
+		var subject = document.getElementById("sujet").value;
+		/* Récupère le sujet et le message et les place automatiquement
+		 dans les bons champs à l'ouverture du mailto */	
 		frm.action = "mailto:adrien.pleux@gmail.com?subject="+subject+"&body="+msg;
  		return true;	
 }
-/* Drag and Drop page d'accueil */
-
+/* -------------------------------- 
+    = Drag and drop page d'accueil
+   -------------------------------- */
+/*S'active au moment où l'on maintien le clique sur un élément mobile*/
 function drag(target, evt){
 	evt.dataTransfer.setData("recept", target.id);
 }
+/*S'active au moment où l'on place l'élément dans la zone de réception*/
 function drop(target, evt){
 	var id = evt.dataTransfer.getData("recept", target.id);
-	target.appendChild(document.getElementById(id));
+	target.appendChild(document.getElementById(id)); //écriture dans le document html de l'élément déplacé
 	evt.preventDefault();
+	/* On lance l'url correspondante au logo déposé dans la zone de réception */
 	switch(id){
 		case 'gplus' :
 			window.open("https://plus.google.com/111018673005485122819");
@@ -35,128 +44,31 @@ function drop(target, evt){
 	}	
 }
 
-/* Page animations css */
+/* -------------------------------- 
+    = Animations CSS3
+   -------------------------------- */
 
-
+/* S'active au clic du bouton "Tester !" */   
 function anim(){
-	var type = document.getElementById("type").value;
-	var temps = document.getElementById("temps").value;
-	var infini = document.getElementById("infinite").checked;
-	var direction = document.getElementById("direction").value;
 	var panda = document.getElementById("panda");
-	var i;
-	if (infini == true) {
-		i = " infinite";
-	}else{
-		i = "";
-	}
-	panda.style.WebkitAnimation = type+" "+temps+"s"+i+" "+direction;
-	panda.style.animation = type+" "+temps+"s"+i+" "+direction;
+	/* 
+		On met en place une animation vide puis on fixe un temps d'exécution pour permettre de cliquer 
+		plusieurs fois sur le bouton "Tester !" sans avoir à changer le type d'animation  
+	*/
+	panda.style.webkitAnimation = "";
+	panda.style.animation = "";
+	setTimeout(function(){
+		var type = document.getElementById("type").value;
+		var temps = document.getElementById("temps").value;
+		var infini = document.getElementById("infinite").checked;
+		var direction = document.getElementById("direction").value;
+		/* Mise en place de la propriété css d'animation */
+		panda.style.webkitAnimation = type+" "+temps+"s"+((infini == true)?" infinite":" 1").toString()+" "+direction;
+		panda.style.animation = type+" "+temps+"s"+((infini == true)?" infinite":" 1").toString()+" "+direction;
+	}, 200);
 }
 
-/*
-function verifSelection() {
-	invalidChars = " /:,;'";
-	if (document.formC.champ1.value == "") {
-		return false;
-	} 
-	if (document.formC.champ2.value == "") {
-		return false;
-	} 
-	if (document.formC.zone_email1.value == "") {
-		return false;
-	}
 
-	for (i=0; i < invalidChars.length; i++) {	// does it contain any invalid characters?
-		badChar = invalidChars.charAt(i);
-		if (document.formC.zone_email1.value.indexOf(badChar,0) > -1) {
-			alert("Votre adresse e-mail contient des caractères invalides. Veuillez vérifier.");
-			document.formC.zone_email1.focus();
-			return false;
-		}
-	}
-
-	atPos = document.formC.zone_email1.value.indexOf("@",1);			// there must be one "@" symbol
-	if (atPos == -1) {
-		alert('Votre adresse e-mail ne contient pas le signe "@". Veuillez vérifier.');
-		document.formC.zone_email1.focus();
-		return false;
-	}
-
-	if (document.formC.zone_email1.value.indexOf("@",atPos+1) != -1) {	// and only one "@" symbol
-		alert('Il ne doit y avoir qu\'un signe "@". Veuillez vérifier.');
-		document.formC.zone_email1.focus();
-		return false;
-	}
-
-	periodPos = document.formC.zone_email1.value.indexOf(".",atPos);
-
-	if (periodPos == -1) {					// and at least one "." after the "@"
-		alert('Vous avez oublié le point "." après le signe "@". Veuillez vérifier.');
-		document.formC.zone_email1.focus();
-		return false;
-	}
-
-	if (periodPos+3 > document.formC.zone_email1.value.length)	{		// must be at least 2 characters after the 
-		alert('Il doit y avoir au moins deux caractères après le signe ".". Veuillez vérifier.');
-		document.formC.zone_email1.focus();
-		return false;
-	}
-	
-} */
-
-/*JS leopold*/
-/*
-function overImg(){
-	this.style.borderBottom="3px solid blue";
-	this.style.borderRight="3px solid blue";
-}
-
-function leaveImg(){
-	this.style.borderBottom="3px solid black";
-	this.style.borderRight="3px solid black";
-}
-
-function overLi(event){
-	event.target.getElementsByTagName('ul')[0].style.display="block";
-	
-}
-
-function leaveLi(event){	
-	event.target.getElementsByTagName('ul')[0].style.display="none";
-}
-
-function overCV(event){
-	
-	prompt(event.target.getElementsByClassName('CVHid'));
-	event.target.getElementsByTagName('div').style.display="block";
-	
-}
-
-function leaveCV(event){	
-	event.target.getElementsByTagName('div')[0].style.display="none";
-}
-
-var tabDiv = document.getElementsByClassName("divImage");
-for (var i = 0; i < tabDiv.length; i++) {
-    tabDiv[i].addEventListener('mouseover', overImg, false);
-	tabDiv[i].addEventListener('mouseleave', leaveImg, false);
-}
-var tabLi = document.getElementsByClassName("titreMenuH");
-for (var i = 0; i < tabLi.length; i++) {
-	
-    tabLi[i].addEventListener('mouseover', overLi, false);
-	tabLi[i].addEventListener('mouseleave', leaveLi, false);
-	
-}
-
-var tabCV = document.getElementsByClassName("divCV");
-for (var i = 0; i < tabCV.length; i++) {
-	
-    tabCV[i].addEventListener('mouseover', overCV, false);
-	tabCV[i].addEventListener('mouseleave', leaveCV, false);
-	
-}*/
 
 
 

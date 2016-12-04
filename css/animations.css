@@ -21,6 +21,9 @@ article {
 #boiteAnimations p {
     margin-top : 50px;
 }
+#pA {
+    text-align: center;
+}
 #fDiv{
     width : 50%;
     display : inline-block;
@@ -42,7 +45,8 @@ article {
 /* ----------------------------- 
     = Création des animations
    ----------------------------- */
-/* Effet slide in*/
+
+/* Effet slide in */
 @keyframes slide-in {
     from { transform: translate3d(80%, 0, 0); }
     to   { transform: translate3d(-10%, 0, 0); }
@@ -53,7 +57,7 @@ article {
 }
 
 
-/* Effet slide out*/
+/* Effet slide out */
 @keyframes slide-out {
     from { transform: translate3d(-10%, 0, 0); }
     to   { transform: translate3d(80%, 0, 0); }
@@ -75,7 +79,7 @@ article {
 }
 
 
-/* Effet fade-out*/
+/* Effet fade-out */
 @keyframes fade-out {
     from { opacity: 1; }
     to   { opacity: 0; }
@@ -87,7 +91,6 @@ article {
 
 
 /* Effet cover-in */
-
 @keyframes cover-in {
     from { transform: translate3d(0, 100%, 0); }
     to   { transform: translate3d(0, 0, 0); }
@@ -99,7 +102,6 @@ article {
 
 
 /* Effet cover-out */
-
 @keyframes cover-out {
     from { transform: translate3d(0, 0, 0); }
     to   { transform: translate3d(0, 100%, 0); }

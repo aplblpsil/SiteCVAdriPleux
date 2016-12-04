@@ -32,3 +32,19 @@ article {
 	border : 2px solid #5F8287;
 	margin : 10px 30px 10px 30px;
 }
+
+/* Effet de rebond sur les projets */
+#boiteProjets > div  :hover{
+    -webkit-animation: bounce 0.3s ease infinite alternate; /* Safari, Chrome */
+    animation: bounce 0.3s ease infinite alternate; /* Syntaxe IE (normale) */
+}
+
+@keyframes bounce{ /* Syntaxe IE (normale) */
+     from {transform: translateY(0);}
+     to   {transform: translateY(-20px);}
+}
+
+@-webkit-keyframes bounce{ /* Safari, Chrome*/
+     from {-webkit-transform: translateY(0);}
+     to   {-webkit-transform: translateY(-20px);}
+}

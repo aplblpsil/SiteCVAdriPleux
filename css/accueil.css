@@ -69,8 +69,3 @@ article{
      from {-webkit-transform: translateY(0);}
      to   {-webkit-transform: translateY(-20px);}
 }
-
-@-moz-keyframes bounce{ /* Mozillas*/
-     from {-moz-transform: translateY(0);}
-     to   {-moz-transform: translateY(-20px);}
-}

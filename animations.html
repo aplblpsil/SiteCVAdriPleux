@@ -3,18 +3,22 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>CV Adrien Pleux</title>
+
+		<link rel="shortcut icon" type="image/x-icon" href="images/favPanda.ico" />
 		<link href="css/main.css" rel="stylesheet" />
 		<link href="css/animations.css" rel="stylesheet" />
 		<script type="text/javascript" src="js/main.js"></script>
 	</head>
 	<body>
 		<div id="contener">
+			<!--En-tête de page-->
 			<header>	
 				<div id="mainHeader">
 					<h1>Adrien Pleux</h1>
 					<h3>Etudiant en Licence Professionnelle SIL</h3>
 				</div>	
 			</header>
+			<!--Menu principal-->
 			<nav id="menuPrincipal">
 				<a href="./index.html">
 					<div>
@@ -55,31 +59,35 @@
 			<article>
 				<div id="boiteAnimations">
 					<h2>Animations CSS3</h2>
-					<p>Vous pouvez tester quelques animations qui s'afficheront </p>
+					<p id="pA">Vous pouvez tester quelques animations qui s'afficheront sur le petit panda</p>
 					<div id="fDiv">
-						<form name="formA" method="post" action="">
+						<form name="formA" method="post">
 							<fieldset>
 								<p>
-									<label for="typeA">Type d'animation :</label>
+									<!--Liste déroulante pour choisir le type d'animation-->
+									<label for="type">Type d'animation :</label>
 									<select class="select" id="type" name="type">
 										<option value="slide-in">Slide in</option>
 										<option value="slide-out">Slide out</option>
-										<option value="fade-in">Fade in</option>
-										<option value="fade-out">Fade out</option>
 										<option value="cover-in">Cover in</option>
 										<option value="cover-out">Cover out</option>
+										<option value="fade-in">Fade in</option>
+										<option value="fade-out">Fade out</option>
 									</select>
 								</p>
 								<p>
+								<!--Permet de définir la durée de l'animation-->
 									<label for="temps">Temps en secondes :</label>
-									<input id="temps" class="input" name="temps" type="text" value="0.5" required="required"/>
+									<input id="temps" class="input" name="temps" type="text" value="1.5" required="required"/>
 								</p>
 								<p>
-									<label for="infinite">Infini</label>
+									<!--Permet de mettre en place un nombre d'iérations inifinie de l'animation ou non-->
+									<label for="infinite">Infini :</label>
 									<input id="infinite" class="cb" name="infinite" type="checkbox" checked/>
 								</p>
 								<p>
-									<label for="alternative">Direction</label>
+									<!--Liste déroulante pour choisir le type de direction-->
+									<label for="direction">Direction :</label>
 									<select class="select" id="direction" name="direction">
 										<option value="normal" selected>Normal</option>
 										<option value="reverse">Reverse</option>
@@ -88,7 +96,7 @@
 									</select>
 								</p>
 								<p>
-									<input  class="bouton" name="sub" type="button" value="Tester !" onclick="anim()"/>
+									<input  class="bouton" name="sub" type="button" value="Tester !" onclick="anim();"/>
 								</p>
 							</fieldset>
 						</form>
@@ -96,6 +104,17 @@
 					<div id="resultat"><img id="panda" src="images/panda.png" alt="Panda"></div>
 				</div>
 			</article>
+			<footer>
+				<p>Site développé en <img src="images/HTML5_Logo_32.png" alt="logo html5"/><br />
+				Dernière mise à jour le <time datetime="2016-12-04">4 Décembre 2016</time>.</p>
+				<p>
+					<a href="http://jigsaw.w3.org/css-validator/">
+						<img 	style="border:0;width:88px;height:31px"
+								src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+								alt="CSS Valide !" />
+					</a>
+				</p>
+			</footer>
 		</div>
 	</body>
 </html>
